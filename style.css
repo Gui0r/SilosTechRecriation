@@ -1,0 +1,472 @@
+/* Estilos Globais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Cabeçalho e Navegação */
+.cabecalho {
+    background: #2c3e50; /* Cor escura para o cabeçalho, similar à referência */
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: #0779e4 3px solid;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.cabecalho nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+.cabecalho .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.cabecalho ul {
+    display: flex;
+}
+
+.cabecalho ul li {
+    margin-left: 20px;
+}
+
+.cabecalho ul li a {
+    color: #fff;
+    font-weight: bold;
+}
+
+.cabecalho ul li a:hover {
+    color: #f39c12; /* Cor de destaque ao passar o mouse */
+}
+
+/* Seção Hero */
+.secao-principal {
+    background: url('imagens/hero_banner.jpeg') no-repeat center center/cover;
+    height: 100vh; /* Altura total da viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+    margin-top: 60px; /* Ajuste para o cabeçalho fixo */
+}
+
+.conteudo-principal h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.conteudo-principal p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+.botao-principal {
+    background: #f39c12; /* Cor laranja para o botão, conforme referência */
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.botao-principal:hover {
+    background: #e67e22;
+}
+
+/* Seções Genéricas */
+section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    position: relative;
+    color: #2c3e50;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #f39c12;
+    margin: 10px auto 0;
+}
+
+/* Sobre a SilosTech */
+.secao-sobre {
+    background: #fff;
+}
+
+.secao-sobre p {
+    width: 70%;
+    margin: 0 auto;
+    font-size: 1.1em;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Nossos Produtos */
+.secao-produtos {
+    background: #f9f9f9;
+}
+
+.grade-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.item-produto {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.item-produto img {
+    width: 100%;
+    height: 200px; /* Altura fixa para as imagens dos produtos */
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.item-produto h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+/* Diferenciais SilosTech */
+.secao-diferenciais {
+    background: #fff;
+}
+
+.secao-diferenciais ul {
+    width: 70%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.secao-diferenciais ul li {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+    border-left: 4px solid #f39c12; /* Linha laranja à esquerda, como na referência */
+    padding: 10px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+}
+
+.secao-diferenciais ul li strong {
+    color: #2c3e50;
+}
+
+/* Compromisso Ambiental */
+.secao-ambiental {
+    background: #fff; /* Tom verde claro para a seção ambiental */
+}
+
+.conteudo-ambiental {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.conteudo-ambiental img {
+    max-width: 40%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.conteudo-ambiental p {
+    font-size: 1.1em;
+}
+
+/* Depoimentos de Clientes */
+.secao-depoimentos {
+    background: #fff;
+}
+
+.item-depoimento {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    border-left: 5px solid #f39c12;
+}
+
+.item-depoimento p {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.item-depoimento cite {
+    display: block;
+    text-align: right;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Contatos dos Representantes */
+.secao-representantes {
+    background: #f9f9f9;
+}
+
+.grade-representantes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.item-representante {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.item-representante h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #2c3e50;
+    border-bottom: 2px solid #f39c12;
+    padding-bottom: 5px;
+}
+
+/* Entre em Contato e Localização */
+.secao-contato {
+    background: #fff;
+}
+
+.flex-contato {
+    display: flex;
+    gap: 40px;
+    width: 85%;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.formulario-contato {
+    flex: 1;
+    padding: 30px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.formulario-contato div {
+    margin-bottom: 15px;
+}
+
+.formulario-contato label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.formulario-contato input[type="text"],
+.formulario-contato input[type="email"],
+.formulario-contato textarea {
+    width: calc(100% - 22px); /* Ajuste para padding e borda */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.formulario-contato textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.localizacao {
+    flex: 1;
+    text-align: left;
+}
+
+.localizacao h3 {
+    font-size: 1.5em;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    
+}
+
+.localizacao p {
+    margin: 0;
+    line-height: 1.8;
+}
+
+.imagem-mapa {
+    width: 100%;
+    max-width: 400px; /* Limita o tamanho do mapa */
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.caixa-mapa {
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 3px 3px;
+    color: #333;
+    font-size: 1.1em;
+    background: #fff;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    display: block;
+    min-width: 300px;
+    width: 90%;
+    max-width: 100%;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-weight: normal;
+    text-align: left;
+}
+
+/* Rodapé */
+.rodape {
+    background: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 0; /* Remove margem superior se houver */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cabecalho nav {
+        flex-direction: column;
+    }
+
+    .cabecalho ul {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .cabecalho ul li {
+        margin: 10px 0;
+    }
+
+    .secao-principal {
+        margin-top: 120px; /* Ajuste maior para cabeçalho empilhado */
+    }
+
+    .conteudo-principal h1 {
+        font-size: 2.2em;
+    }
+
+    .conteudo-principal p {
+        font-size: 1.2em;
+    }
+
+    .secao-sobre p,
+    .secao-diferenciais ul,
+    .item-depoimento {
+        width: 90%;
+    }
+
+    .conteudo-ambiental {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .conteudo-ambiental img {
+        max-width: 80%;
+    }
+
+    .flex-contato {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .grade-produtos,
+    .grade-representantes {
+        grid-template-columns: 1fr;
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .conteudo-principal h1 {
+        font-size: 1.8em;
+    }
+    .conteudo-principal p {
+        font-size: 1em;
+    }
+    .botao-principal {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+    section h2 {
+        font-size: 2em;
+    }
+}
+
+.secao-sobre h2,
+.secao-produtos h2,
+.secao-diferenciais h2,
+.secao-ambiental h2,
+.secao-depoimentos h2,
+.secao-representantes h2,
+.secao-contato h2 {
+    color: #2c3e50;
+}
+
